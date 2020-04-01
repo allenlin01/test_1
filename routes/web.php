@@ -1,5 +1,5 @@
 <?php
-
+ /** there is something to do */
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route ::get('/',function(){
+Route::get('/',function(){
     return 'Hello world';
 });
 
-Route::get('users/{id}', function ($id) {
-    return 'user_id:'.$id;
-});
+Route::get('/upload','uploadcontroller@upload' );
+
+Route::get('/upload1/{id}','uploadcontroller@data_upload') ;
